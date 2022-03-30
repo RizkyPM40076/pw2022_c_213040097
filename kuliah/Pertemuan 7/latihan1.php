@@ -1,5 +1,5 @@
 <?php
-// $_GET
+//GET
 $mahasiswa = [
     [
         "nama" => "Rizky Priya Mandiri", 
@@ -27,16 +27,16 @@ $mahasiswa = [
 <!DOCTYPE html>
 <html>
     <head>
-        <title>GET</title>
+        <title>GET></title>
     </head>
     <body>
-    <h1>Daftar Mahasiswa</h1>
-    <?php foreach( $mahasiswa as $mhs) : ?>
+        <h1>Daftar Mahasiswa</h1>
         <ul>
-            <li><img src="img/<?= $mhs["gambar"]; ?>"></li>
-            <li><?= $mhs["nama"]; ?></li>
-            <li><?= $mhs["nrp"]; ?></li>
-        </ul>
-    <?php endforeach; ?>
-
-</body>
+        <?php foreach ( $mahasiswa as $mhs ) :?>
+            <li>
+                <a href="latihan2.php?nama=<?= $mhs["nama"] ?>&npm=<?= $mhs["npm"]; ?>&email=<?= $mhs["email"]; ?>&jurusan=<?= $mhs["jurusan"]; ?>&gambar=<?= $mhs["gambar"]; ?>"><?= $mhs["nama"]; ?></a>
+            </li>
+        <?php endforeach; ?>
+        </ul>    
+    </body>
+</html>
